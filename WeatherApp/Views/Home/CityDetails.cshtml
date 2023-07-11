@@ -1,10 +1,10 @@
 ﻿@model CityWeather
-
-<div class="container">
-    <div class="page-content">
-        <div class="margin-bottom">
-            <h1>Weather</h1>
-        </div>
+@{
+    ViewBag.Title = "City Weather";
+    if(Model != null){
+        ViewBag.Title = Model.CityName + " | " + ViewBag.Title;
+    }
+}
 
         @if (Model != null)
         {
@@ -30,6 +30,3 @@
             <h3>City Code is not valid.</h3>
         }
 
-    </div>
-
-</div>
